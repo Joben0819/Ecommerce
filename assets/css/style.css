@@ -392,12 +392,21 @@ html {
 .purchased .buy {
   width: 40%;
 }
+.purchased .buy .area-price {
+  width: 100%;
+  height: 10rem;
+  border: solid 2px #000;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
 .purchased .buy .btns {
   display: flex;
   justify-content: flex-end;
 }
 .purchased .buy .btns button {
-  width: 80%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

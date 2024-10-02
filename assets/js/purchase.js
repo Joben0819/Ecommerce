@@ -1,4 +1,5 @@
 const inventory = document.getElementById('inventory')
+const money = document.getElementById('money')
 let value = JSON.parse(sessionStorage.getItem('data')) ?? []
 var data = [
     {
@@ -41,6 +42,9 @@ function reload() {
         </div>
         `
     ).join(''); // .join('') to convert the array to a single string
+
+    const totalPrice = value.reduce((sum, item) => sum + parseFloat(item.price.replace('$', '')), 0);
+    money.innerText = totalPrice
 }
 
 function Delete(num) {
@@ -49,6 +53,7 @@ function Delete(num) {
     sessionStorage.setItem('data', JSON.stringify(filter));
     reload();
 }
+
 
 window.onload = () => {
     reload();
